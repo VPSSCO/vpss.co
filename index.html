@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret Page</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+</head>
+<body>
+  <main>
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="username" placeholder="Username">
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" placeholder="Password">
+      </div>
+
+      <button onclick="login()">Login</button>
+
+      <div class="signup">
+        <center><p>Don't have an account? <a href="signup/index.html">Sign up</a></p></center>  
+      </div>
+
+
+    <div class="copyright">
+      <center><p>© 2025,VPSS-Company,Co. or its affiliates</p></center>
+    </div>  
+    
+  
+  </div>
+  </main>
+
+  <script href="index.js">
+    function login() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var authorised;
+
+  if (
+    (username === "vanshp" && password === "294") ||
+    (username === "kamleshp" && password === "") ||
+    (username === "bhartip" && password === "9723386585")
+  ) {
+    authorised = true;
+  } else {
+    authorised = false;
+    alert("Sorry, username or password is incorrect.");
+  }
+
+  if (authorised) {
+    // ✅ Redirect without alert
+    window.location.href = "generalsite.html";
+  }
+}
+
+  </script>
+</body>
+</html>
