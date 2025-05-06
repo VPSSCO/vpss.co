@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.input-group i {
+  margin-right: 10px;
+  color: #888;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  text-align: center;
+}
+
+.copyright {
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Toggle Button Style */
+.theme-switch-wrapper {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  background-color: #ffeb3b;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.4s ease;
+}
+
+.theme-switch i {
+  color: #000;
+  font-size: 16px;
+  position: absolute;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.theme-switch .fa-sun {
+  left: 10px;
+  opacity: 1;
+}
+
+.theme-switch .fa-moon {
+  right: 10px;
+  opacity: 0;
+}
+
+.theme-switch input:checked ~ .fa-sun {
+  opacity: 0;
+}
+
+.theme-switch input:checked ~ .fa-moon {
+  opacity: 1;
+  color: #fff;
+}
+
+.theme-switch input:checked ~ .theme-switch {
+  background-color: #333;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .login-container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .input-group {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .input-group input {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+body.dark-mode button {
+  background-color: #66bb6a;
+  color: white;
+}
+
+body.dark-mode button:hover {
+  background-color: #57a05a;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .theme-switch {
+  background-color: #333 !important;
+}
