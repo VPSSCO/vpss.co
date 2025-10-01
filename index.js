@@ -4,9 +4,10 @@ function login() {
   var authorised;
 
   if (
-    (username === "vanshp" && password === "294") ||
-    (username === "kamleshp" && password === "") ||
-    (username === "bhartip" && password === "9723386585")
+    (username === "vanshp" && password === "25042010") ||
+    (username === "kamleshp" && password === "9904072513") ||
+    (username === "bhartip" && password === "9723386585") ||
+    (username === "ADMIN" && password === "vansh25042010")
   ) {
     authorised = true;
   } else {
@@ -19,3 +20,4 @@ function login() {
     window.location.href = "generalsite.html";
   }
 }
+
