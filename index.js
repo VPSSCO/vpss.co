@@ -1,7 +1,7 @@
 function login() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-  var authorised;
+  var authorised = false; // Default to false
 
   if (
     (username === "vanshp" && password === "25042010") ||
@@ -9,9 +9,8 @@ function login() {
     (username === "bhartip" && password === "9723386585") ||
     (username === "ADMIN" && password === "vansh25042010")
   ) {
-    authorised = true;
+    authorised = true; // Set to true if credentials match
   } else {
-    authorised = false;
     alert("Sorry, username or password is incorrect.");
   }
 
@@ -20,4 +19,3 @@ function login() {
     window.location.href = "generalsite.html";
   }
 }
-
