@@ -1,73 +1,183 @@
 :root {
-    --primary: #7952b3;
-    --border: #ccc;
-    --background: #f9f9f9;
-    --footer-bg: #eee;
-    --text-dark: #333;
-  }
+    /* Color Palette Refinement */
+    --primary: #6c5ce7; /* A modern, deeper purple/indigo */
+    --primary-dark: #5a4bce; /* Darker for hover effects */
+    --border: #e0e0e0; /* Lighter border */
+    --background: #f8f9fa; /* Very light background */
+    --card-bg: #ffffff; /* White background for elements */
+    --footer-bg: #e9ecef; /* Light gray footer */
+    --text-dark: #212529; /* Near-black for readability */
+    --text-light: #6c757d; /* Muted text */
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08); /* Modern, soft shadow */
+  }
 
-  body {
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--primary);
+    color: var(--card-bg);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 { /* Targeting the H1 in the header */
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--background);
-    color: var(--text-dark);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-size: 1.8rem;
   }
 
-  header {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.5rem;
+  main {
+    flex: 1;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+  }
+
+  /* --- Table Enhancements --- */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-light);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  caption { /* Visually hide caption but keep it for screen readers */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+}
+
+  th, td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    border-right: none;
+    border-left: none;
+  }
+
+  th {
+    background: var(--footer-bg);
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  /* Remove bottom border from the last row */
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Hover effect for data rows */
+  tbody tr:hover {
+      background-color: #f1f3f5;
+      transition: background-color 0.2s ease;
   }
 
-  main {
-    flex: 1;
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
 
-  h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+  a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    table-layout: fixed;
-  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--footer-bg);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: auto;
+  }
 
-  th, td {
-    padding: 12px 16px;
-    border: 1px solid var(--border);
-    text-align: center;
-  }
+  .company-name {
+    color: var(--text-dark);
+    font-weight: 700;
+  }
 
-  th {
-    background: var(--footer-bg);
-    font-weight: bold;
-  }
+  /* --- Mobile Responsiveness --- */
+  @media (max-width: 768px) {
+    /* Force the table into a 'card' layout on small screens */
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
 
-  a {
-    color: var(--primary);
-    text-decoration: none;
-  }
+    thead tr {
+      position: absolute; /* Hide the desktop header */
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr {
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    td {
+      border: none;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+      min-height: 50px; /* Ensure enough height for content and label */
+    }
 
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: var(--footer-bg);
-    font-size: 0.9rem;
-    color: var(--text-dark);
-  }
+    td:last-child {
+      border-bottom: none;
+    }
+
+    /* Create the 'header' label for each piece of data */
+    td::before {
+      position: absolute;
+      top: 0;
+      left: 6px;
+      width: 45%;
+      padding: 15px 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* Set the labels based on the column order */
+    td:nth-of-type(1)::before { content: "Project Name:"; }
+    td:nth-of-type(2)::before { content: "Source Code:"; }
+    td:nth-of-type(3)::before { content: "Live Demo:"; }
+  }
