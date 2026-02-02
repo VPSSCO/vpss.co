@@ -51,7 +51,7 @@
             if (x >= maxSlide - 5) {
                 isDragging = false;
                 // REDIRECT TO YOUR CHOICE HERE
-                window.location.href = "https://www.google.com";
+                window.location.href = "https://vpssco.netlify.app/generalsite.html";
             }
         });
 
@@ -61,3 +61,4 @@
                 sliderHandle.style.left = '0px'; // Snap back if not finished
             }
         });
+
