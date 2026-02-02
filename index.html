@@ -1,100 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="google-adsense-account" content="ca-pub-9523908830870663">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VPSS.CO</title>
-    <link rel="website icon" type="png" href="favicon4.png">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9523908830870663"
-     crossorigin="anonymous"></script>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ET7XKYNYYR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ET7XKYNYYR');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Blue Lamp Login</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Cute Animated Toggle Button with Icons -->
-  <div class="theme-switch-wrapper">
-    <label class="theme-switch">
-      <input type="checkbox" id="checkbox" />
-      <i class="fas fa-sun"></i>
-      <i class="fas fa-moon"></i>
-    </label>
-  </div>
 
-  <main>
-    <div class="login-container">
-      <h2>Login</h2>
+    <div class="container">
+        <div class="lamp-container">
+            <div class="lamp-shade"><div class="face" id="lampFace">︶ ︶</div></div>
+            <div class="pull-cord" id="pullCord"></div>
+            <div class="lamp-base"></div>
+            <div class="lamp-bottom"></div>
+        </div>
 
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" id="username" placeholder="Username">
-      </div>
+        <div class="login-card" id="loginCard">
+            <h2>Welcome Back</h2>
+           
+            <div id="loginForm" class="form-content">
+                <input type="text" id="username" placeholder="Username (admin)">
+                <input type="password" id="password" placeholder="Password (1234)">
+                <button onclick="checkLogin()">Login</button>
+                <p id="errorMsg" style="color: #ff4d4d; font-size: 12px; text-align: center; margin-top: 10px; display: none;">Invalid Credentials</p>
+            </div>
 
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="password" placeholder="Password">
-      </div>
-
-      <button onclick="login()">Login</button>
-
-      <div class="signup">
-        <center><p>Don't have an account? <a href="signup/index.html">Sign up</a></p></center>  
-      </div>
-
-      <div class="copyright">
-        <center><p>© 2025, VPSS-Company, Co. or its affiliates</p></center>
-      </div>  
+            <div id="sliderContainer">
+                <div class="slider-text">Slide to Enter</div>
+                <div class="slider-handle" id="sliderHandle">→</div>
+            </div>
+        </div>
     </div>
-  </main>
 
-
-  <script href="index.js">
- function login() {
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-      var authorised;
-
-      if (
-        (username === "vanshp" && password === "294") ||
-        (username === "kamleshp" && password === "") ||
-        (username === "bhartip" && password === "9723386585")
-      ) {
-        authorised = true;
-      } else {
-        authorised = false;
-        alert("Sorry, username or password is incorrect.");
-      }
-
-      if (authorised) {
-        window.location.href = "generalsite.html";
-      }
-    }
-
-    // Dark mode toggle
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("checkbox");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-      });
-    });
-
-
-  </script>
+     <script src="index.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
