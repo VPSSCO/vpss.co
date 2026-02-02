@@ -24,11 +24,11 @@
             const pass = document.getElementById('password').value;
 
             // Set your desired credentials here
-            if (user === "admin" && pass === "1234") {
-                loginForm.style.display = 'none';
-                sliderContainer.style.display = 'block';
-            } else {
-                document.getElementById('errorMsg').style.display = 'block';
+            if ((user === "vpssco" && pass === "294") || (user === "vanshp" && pass === "0000")) {
+    loginForm.style.display = 'none';
+    sliderContainer.style.display = 'block';
+} else {
+    document.getElementById('errorMsg').style.display = 'block';
             }
         }
 
@@ -61,4 +61,5 @@
                 sliderHandle.style.left = '0px'; // Snap back if not finished
             }
         });
+
 
